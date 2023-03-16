@@ -13,11 +13,12 @@ public class Pebble : MonoBehaviour {
 
     void Start() {
         
-        addInitialForce();
+        ResetPosition();
+        AddInitialForce();
     }
 
     // funzione che attribuisce una forza iniziale al sassolino
-    private void addInitialForce() {
+    public void AddInitialForce() {
         
         float x = Random.value < 0.5f ? Random.Range(-1.0f, -0.5f) :
                                         Random.Range(0.5f, 1.0f);
@@ -27,5 +28,14 @@ public class Pebble : MonoBehaviour {
 
         rigidBody.AddForce(direction * this.speed);
 
+    }
+
+    public void AddForce(Vector2 force) {
+        rigidBody.AddForce(force);
+    }
+
+    public void ResetPosition() {
+        rigidBody.velocity = Vector2.zero;
+        transform.position = Vector2.zero;
     }
 }

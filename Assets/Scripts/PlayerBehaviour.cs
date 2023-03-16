@@ -14,7 +14,7 @@ public class PlayerBehaviour : MonoBehaviour {
     }
 
     // funzione per invertire il giocatore a seconda della direzione
-    public void flipPlayer (float moveHorizontal) {
+    public void FlipPlayer (float moveHorizontal) {
 
         if (moveHorizontal > 0) { // destra
             transform.localScale = new Vector3(-1, 1, 1);
@@ -22,6 +22,10 @@ public class PlayerBehaviour : MonoBehaviour {
         else if (moveHorizontal < 0) { // sinistra
             transform.localScale = new Vector3(1, 1, 1);
         }
+    }
+
+    public void ResetPlayerPosition() {
+        rigidBody.position = new Vector2(0.0f, rigidBody.position.y);
     }
 
 }

@@ -13,6 +13,6 @@ public class PlayerScript : PlayerBehaviour {
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, 0.0f);
         transform.position += movement * this.speed * Time.deltaTime;
         
-        flipPlayer(moveHorizontal);
+        FlipPlayer(moveHorizontal);
     }
 }
