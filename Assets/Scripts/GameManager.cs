@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-    public PlayerBehaviour player;
-    public PlayerBehaviour enemy;
+    public FishBehaviour player;
+    public FishBehaviour enemy;
 
     public Pebble pebble;
 

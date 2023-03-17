@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerBehaviour : MonoBehaviour {
+public class FishBehaviour : MonoBehaviour {
     
     protected Rigidbody2D rigidBody;
     public float speed = 9.0f;

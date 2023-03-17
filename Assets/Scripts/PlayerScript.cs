@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerScript : PlayerBehaviour {
+public class PlayerScript : FishBehaviour {
 
     // muovo il giocatore con le frecce
     void Update() {
