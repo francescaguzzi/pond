@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour {
 
     public GameObject gameOverPanel;
     public Text winnerText;
+    public int gameMode; // 1 = single player, 2 = multiplayer
     
 
     public void PlayerScores() {
@@ -61,12 +62,12 @@ public class GameManager : MonoBehaviour {
             
             // restart the game
             Time.timeScale = 1;
-            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(gameMode);
         }
 
         // if user presses "q" return to the main menu
         if (Input.GetKeyDown(KeyCode.Q)) {
-            // UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         }
     }
 

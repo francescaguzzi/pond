@@ -223,6 +223,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 18
+  multiplayerMode: 0
+  playerNumber: 0
 --- !u!50 &179572958
 Rigidbody2D:
   serializedVersion: 4
@@ -1146,6 +1148,7 @@ MonoBehaviour:
   enemyScoreText: {fileID: 1515518332}
   gameOverPanel: {fileID: 1698461018}
   winnerText: {fileID: 855660296}
+  gameMode: 1
 --- !u!1 &962581804
 GameObject:
   m_ObjectHideFlags: 0
