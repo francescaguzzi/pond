@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class BounceManager : MonoBehaviour {
     
-    // script che aumenta la velocità della palla ad ogni collisione
-    // può essere aggiunto ai giocatori, ai muri o a qualsiasi altro oggetto
+    // on every collision, this script increases the speed of the pebble
 
     public float strenght = 70.0f;
 
@@ -15,11 +14,11 @@ public class BounceManager : MonoBehaviour {
 
         if (pebble != null) {
 
-            // calcolo la direzione in cui deve essere spinta la palla
+            // get the direction of the collision
             Vector2 direction = collision.contacts[0].point;
             direction = direction.normalized;
 
-            pebble.AddForce(-direction * this.strenght); // direzione negativa per invertirla
+            pebble.AddForce(-direction * this.strenght); // negative direction because we want to bounce off the object
         }
 
     }

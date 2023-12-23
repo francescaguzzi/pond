@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -9,15 +10,17 @@ public class GameManager : MonoBehaviour {
 
     public Pebble pebble;
 
-    public TMPro.TMP_Text playerScoreText;
-    public TMPro.TMP_Text enemyScoreText;
+    public Text playerScoreText;
+    public Text enemyScoreText;
 
     private float playerScore;
     private float enemyScore;
+
+    public GameObject gameOverPanel;
+    public Text winnerText;
     
 
     public void PlayerScores() {
-
         this.playerScore++;
         this.playerScoreText.text = this.playerScore.ToString();
 
@@ -32,16 +35,51 @@ public class GameManager : MonoBehaviour {
         this.ResetRound();
     }
 
+
+    public void Update() {
+            
+        if (this.playerScore >= 10 || this.enemyScore >= 10) {
+            this.GameOver();
+        }
+    }
+
+    public void GameOver() {
+
+        // pause the game
+        Time.timeScale = 0;
     
-    /*public void ResetScore() {
+        this.gameOverPanel.gameObject.SetActive(true);
+
+        if (this.playerScore >= 10) 
+            this.winnerText.text = "Player 1 wins!";
+        else 
+            this.winnerText.text = "Player 2 wins!";
+        
+        // user can press space to restart the game
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            this.gameOverPanel.gameObject.SetActive(false);
+            
+            // restart the game
+            Time.timeScale = 1;
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        }
+
+        // if user presses "q" return to the main menu
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            // UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        }
+    }
+
+    
+    public void ResetScore() {
 
         playerScore = 0;
         enemyScore = 0;
         playerScoreText.text = playerScore.ToString();
         enemyScoreText.text = enemyScore.ToString();
-    } */
+    } 
 
-    // resetto la posizione della palla e dei giocatori
+    
     public void ResetRound() {
         
         this.pebble.ResetPosition();

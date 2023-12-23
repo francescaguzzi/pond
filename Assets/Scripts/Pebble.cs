@@ -17,9 +17,8 @@ public class Pebble : MonoBehaviour {
         AddInitialForce();
     }
 
-    // funzione che attribuisce una forza iniziale al sassolino
     public void AddInitialForce() {
-        
+
         float x = Random.value < 0.5f ? Random.Range(-1.0f, -0.5f) :
                                         Random.Range(0.5f, 1.0f);
         float y = Random.value < 0.5f ? -1.0f : 1.0f;

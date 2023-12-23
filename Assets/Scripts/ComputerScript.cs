@@ -20,12 +20,12 @@ public class ComputerScript : FishBehaviour {
     private void Update() {
             
         if (pebble.transform.position.y > 0.0f) {
-            // muovo il giocatore avversario in base alla posizione del sassolino
+            // move the computer player towards the pebble
             var difference = pebble.transform.position.x - transform.position.x;
             var distance = Mathf.Abs(difference);
             if(distance > tolerance)
             {
-                //Normalizziamo la distanza e usiamola come peso per la velocità
+                // normalize the distance to use it as a speed factor
                 var speedFactor = distance > 1f ? 1f : distance;
 
                 direction = difference > 0 ? Vector3.right : Vector3.left;
@@ -35,7 +35,7 @@ public class ComputerScript : FishBehaviour {
 
         }
         else {
-            //Cambia direzione a caso ogni randomDirTimer secondi
+            // move the computer player randomly
             currTimer += Time.deltaTime;
             if (currTimer >= randomDirTimer) {
                 currTimer = 0f;
@@ -43,7 +43,7 @@ public class ComputerScript : FishBehaviour {
                 direction = new Vector3(randomDir, 0, 0);
                 FlipPlayer(-randomDir);
             }
-            //Evita che superi i bordi dello schermo
+            // check if the player is out of bounds
             if(transform.position.x > maxX)
             {
                 transform.position = new Vector3(maxX, transform.position.y, transform.position.z);
