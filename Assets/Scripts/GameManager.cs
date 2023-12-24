@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour {
 
         // if user presses "q" return to the main menu
         if (Input.GetKeyDown(KeyCode.Q)) {
+            Time.timeScale = 1;
             UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         }
     }

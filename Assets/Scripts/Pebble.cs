@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pebble : MonoBehaviour {
 
-    public float speed = 200.0f;
+    public float speed = 130.0f;
     private Rigidbody2D rigidBody;
 
     void Awake() {
@@ -12,9 +12,9 @@ public class Pebble : MonoBehaviour {
     }
 
     void Start() {
-        
+
         ResetPosition();
-        AddInitialForce();
+        Invoke("AddInitialForce", 1.0f); // wait 1 second before adding force
     }
 
     public void AddInitialForce() {
