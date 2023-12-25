@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour {
 
@@ -10,14 +11,14 @@ public class GameManager : MonoBehaviour {
 
     public Pebble pebble;
 
-    public Text playerScoreText;
-    public Text enemyScoreText;
+    public TMP_Text playerScoreText;
+    public TMP_Text enemyScoreText;
 
     private float playerScore;
     private float enemyScore;
 
     public GameObject gameOverPanel;
-    public Text winnerText;
+    public TMP_Text winnerText;
     public int gameMode; // 1 = single player, 2 = multiplayer
     
 
