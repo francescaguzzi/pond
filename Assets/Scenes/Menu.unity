@@ -158,7 +158,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 400, y: 30}
+  m_SizeDelta: {x: 900, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &258769271
 MonoBehaviour:
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Made with <3 (and no fish armed)
+  m_text: Made with <3 by Francesca (and no fish armed)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f95513cc422b2194e864a8c5233f7ac6, type: 2}
   m_sharedMaterial: {fileID: 3189356632195333016, guid: f95513cc422b2194e864a8c5233f7ac6, type: 2}
