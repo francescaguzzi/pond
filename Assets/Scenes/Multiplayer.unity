@@ -237,10 +237,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 1
-  m_Mass: 16.584732
+  m_Mass: 221.12976
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -260,7 +260,7 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179572954}
   m_Enabled: 1
-  m_Density: 3
+  m_Density: 40
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -458,7 +458,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad969c728eb5774eaa22cb1b734c686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 350
 --- !u!1 &416164715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1206,10 +1205,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 1
-  m_Mass: 16.584732
+  m_Mass: 221.12976
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1229,7 +1228,7 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 806638019}
   m_Enabled: 1
-  m_Density: 3
+  m_Density: 40
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
