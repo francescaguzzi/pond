@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour {
     private float enemyScore;
 
     public GameObject gameOverPanel;
+    public GameObject pausePanel;
     public TMP_Text winnerText;
     public int gameMode; // 1 = single player, 2 = multiplayer
     
@@ -42,6 +43,22 @@ public class GameManager : MonoBehaviour {
             
         if (this.playerScore >= 10 || this.enemyScore >= 10) {
             this.GameOver();
+        }
+
+        // pause handling
+        if (Input.GetKeyDown(KeyCode.P)) {
+            if (Time.timeScale == 1) {
+                Time.timeScale = 0;
+                this.pausePanel.gameObject.SetActive(true);      
+            } else {
+                Time.timeScale = 1;
+                this.pausePanel.gameObject.SetActive(false);
+            }
+        }
+
+        if(Input.GetKeyDown(KeyCode.Q)) {
+            Time.timeScale = 1;
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         }
     }
 
@@ -73,7 +90,6 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    
     public void ResetScore() {
 
         playerScore = 0;
@@ -81,7 +97,6 @@ public class GameManager : MonoBehaviour {
         playerScoreText.text = playerScore.ToString();
         enemyScoreText.text = enemyScore.ToString();
     } 
-
     
     public void ResetRound() {
         

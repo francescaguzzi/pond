@@ -6,7 +6,7 @@ public class Pebble : MonoBehaviour {
 
     public float speed = 130.0f;
     private Rigidbody2D rigidBody;
-
+    
     void Awake() {
         rigidBody = GetComponent<Rigidbody2D>();
     }
@@ -15,6 +15,15 @@ public class Pebble : MonoBehaviour {
 
         ResetPosition();
         Invoke("AddInitialForce", 1.0f); // wait 1 second before adding force
+    }
+
+    void Update() {
+
+        // if the pebble is moving too fast, reset its position
+        if (rigidBody.velocity.magnitude > 40.0f) {
+            ResetPosition();
+            Invoke("AddInitialForce", 1.0f); // wait 1 second before adding force
+        }
     }
 
     public void AddInitialForce() {
@@ -37,4 +46,6 @@ public class Pebble : MonoBehaviour {
         rigidBody.velocity = Vector2.zero;
         transform.position = Vector2.zero;
     }
+
+    
 }
