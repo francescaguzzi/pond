@@ -1,4 +1,4 @@
-# Pond     <img src="https://github.com/francescaguzzi/pond/assets/76923530/1826ea71-c4d8-44d7-a282-7d8f13d2fd51" widht="20" height="20">
+# Pond     <img src="https://github.com/francescaguzzi/pond/assets/76923530/1826ea71-c4d8-44d7-a282-7d8f13d2fd51" widht="40" height="40">
 
 It's like playing pong, but you're a fish. Built in Unity engine.
 
