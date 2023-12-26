@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Pebble : MonoBehaviour {
 
-    public float speed = 130.0f;
+    private float speed = 300.0f;
     private Rigidbody2D rigidBody;
-    
+
     void Awake() {
         rigidBody = GetComponent<Rigidbody2D>();
     }
